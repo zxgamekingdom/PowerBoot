@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31507.150
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PowerBoot.Desktop", "PowerBoot.Desktop\PowerBoot.Desktop.csproj", "{AC01A502-C4BC-4224-A35C-9914717FC677}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SetPropertyControl", "SetPropertyControl\SetPropertyControl.csproj", "{B6A1BD86-CBE0-4208-AFE6-D09DDBCA1029}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AC01A502-C4BC-4224-A35C-9914717FC677}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AC01A502-C4BC-4224-A35C-9914717FC677}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AC01A502-C4BC-4224-A35C-9914717FC677}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AC01A502-C4BC-4224-A35C-9914717FC677}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6A1BD86-CBE0-4208-AFE6-D09DDBCA1029}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6A1BD86-CBE0-4208-AFE6-D09DDBCA1029}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6A1BD86-CBE0-4208-AFE6-D09DDBCA1029}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6A1BD86-CBE0-4208-AFE6-D09DDBCA1029}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D570B142-CC09-4580-A923-3F42FC0D1E0F}
+	EndGlobalSection
+EndGlobal
