@@ -1,11 +1,7 @@
 ﻿using System;
-using System.ComponentModel;
 using System.IO;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Input;
-using JetBrains.Annotations;
 using Microsoft.Win32;
 using Microsoft.Xaml.Behaviors.Core;
 using SetPropertyControl.SetPropertyControlLogics.Attributes;
@@ -57,44 +53,44 @@ namespace PowerBoot.Desktop
                 });
             }
 
-            [SetPropertyUserControl.PropertyName("快捷方式名")]
-            [SetPropertyUserControl.Order(0)]
+            [PropertyName("快捷方式名")]
+            [Order(0)]
             public string? LnkName { get; set; }
 
-            [SetPropertyUserControl.PropertyName("程序路径")]
-            [SetPropertyUserControl.Order(1)]
+            [PropertyName("程序路径")]
+            [Order(1)]
 
             public string? ProgramPath { get; set; }
 
-            [SetPropertyUserControl.PropertyName("启动参数")]
-            [SetPropertyUserControl.Order(2)]
+            [PropertyName("启动参数")]
+            [Order(2)]
             public string? Args { get; set; }
 
             [Custom]
             public ICommand CommandDo { get; }
 
-            [SetPropertyUserControl.IgnoreAttribute]
+            [IgnoreAttribute]
             public ICommand CommandCancel { get; }
         }
 
         public class RegCurrentUserInfoViewModel : ViewModelBase, IDoAndCancelCommand
         {
-            [SetPropertyUserControl.PropertyName("程序路径")]
-            [SetPropertyUserControl.Order(0)]
+            [PropertyName("程序路径")]
+            [Order(0)]
             public string? ProgramPath { get; set; }
 
-            [SetPropertyUserControl.PropertyName("注册表名")]
-            [SetPropertyUserControl.Order(1)]
+            [PropertyName("注册表名")]
+            [Order(1)]
             public string? RegName { get; set; }
 
-            [SetPropertyUserControl.PropertyName("启动参数")]
-            [SetPropertyUserControl.Order(2)]
+            [PropertyName("启动参数")]
+            [Order(2)]
             public string? Args { get; set; }
 
             [Custom]
             public ICommand CommandDo { get; }
 
-            [SetPropertyUserControl.IgnoreAttribute]
+            [IgnoreAttribute]
             public ICommand CommandCancel { get; }
 
             public RegCurrentUserInfoViewModel()
@@ -130,22 +126,22 @@ namespace PowerBoot.Desktop
 
         public class RegLocalMachineInfoViewModel : ViewModelBase, IDoAndCancelCommand
         {
-            [SetPropertyUserControl.PropertyName("程序路径")]
-            [SetPropertyUserControl.Order(0)]
+            [PropertyName("程序路径")]
+            [Order(0)]
             public string? ProgramPath { get; set; }
 
-            [SetPropertyUserControl.PropertyName("注册表名")]
-            [SetPropertyUserControl.Order(1)]
+            [PropertyName("注册表名")]
+            [Order(1)]
             public string? RegName { get; set; }
 
-            [SetPropertyUserControl.PropertyName("启动参数")]
-            [SetPropertyUserControl.Order(2)]
+            [PropertyName("启动参数")]
+            [Order(2)]
             public string? Args { get; set; }
 
             [Custom]
             public ICommand CommandDo { get; }
 
-            [SetPropertyUserControl.IgnoreAttribute]
+            [IgnoreAttribute]
             public ICommand CommandCancel { get; }
 
             public RegLocalMachineInfoViewModel()

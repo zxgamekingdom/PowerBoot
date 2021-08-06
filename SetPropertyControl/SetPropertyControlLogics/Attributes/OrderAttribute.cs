@@ -2,26 +2,23 @@
 
 namespace SetPropertyControl.SetPropertyControlLogics.Attributes
 {
-    public partial class SetPropertyUserControl
+    /// <summary>
+    /// 对要显示的属性进行排序
+    /// </summary>
+    [AttributeUsage(AttributeTargets.Property,
+        Inherited = false,
+        AllowMultiple = false)]
+    public sealed class OrderAttribute : Attribute
     {
-        /// <summary>
-        /// 对要显示的属性进行排序
+        ///<summary>
+        ///ctor
         /// </summary>
-        [AttributeUsage(AttributeTargets.Property,
-            Inherited = false,
-            AllowMultiple = false)]
-        public sealed class OrderAttribute : Attribute
+        /// <param name="order">序号,从0开始</param>
+        public OrderAttribute(int order)
         {
-            ///<summary>
-            ///ctor
-            /// </summary>
-            /// <param name="order">序号,从0开始</param>
-            public OrderAttribute(int order)
-            {
-                Order = order;
-            }
-
-            public int Order { get; }
+            Order = order;
         }
+
+        public int Order { get; }
     }
 }

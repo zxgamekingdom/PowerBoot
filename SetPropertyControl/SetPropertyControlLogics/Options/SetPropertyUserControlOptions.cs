@@ -1,32 +1,37 @@
 ﻿#nullable enable
+using SetPropertyControl.SetPropertyControlLogics.Attributes;
+using SetPropertyControl.SetPropertyControlLogics.Options.Args;
+
 using System;
-using System.Reflection;
+using System.Collections.Generic;
 using System.Windows;
+using System.Windows.Controls;
 
 namespace SetPropertyControl.SetPropertyControlLogics.Options
 {
     public class SetPropertyUserControlOptions
     {
-        public Action<PropertyInfo, FrameworkElement>? AutoGenControlAction;
+        public Action<AutoGenControlArgs, FrameworkElement>? AutoGenControl;
 
-        public Func<PropertyInfo, (bool isHideTitle, UIElement uiElement)?>?
+        public Func<GetCustomControlArgs, (bool isHideTitle, UIElement uiElement)?>?
             GetCustomControl;
 
-        public Func<PropertyInfo,
-                Attributes.SetPropertyUserControl.CustomControlAttribute?>?
+        public Func<GetCustomControlAttributeArgs, CustomControlAttribute?>?
             GetCustomControlAttribute;
 
-        public Func<PropertyInfo,
-                Attributes.SetPropertyUserControl.CustomControlKeyAttribute?>?
-            GetCustomControlKeyAttribute;
+        public Func<GetIgnoreAttributeArgs, IgnoreAttribute?>? GetIgnoreAttribute;
+        public Func<GetOrderAttributeArgs, OrderAttribute?>? GetOrderAttribute;
 
-        public Func<PropertyInfo, Attributes.SetPropertyUserControl.IgnoreAttribute?>?
-            GetIgnoreAttribute;
-
-        public Func<PropertyInfo, Attributes.SetPropertyUserControl.OrderAttribute?>?
-            GetOrderAttribute;
-
-        public Func<PropertyInfo, Attributes.SetPropertyUserControl.PropertyNameAttribute?>?
+        public Func<GetPropertyNameAttributeArgs, PropertyNameAttribute?>?
             GetPropertyNameAttribute;
+
+        public Func<GetTitleControlArgs, TextBlock>? GetTitleControl;
+
+        public Func<GetTitleMenuItemAttributeArgs, IEnumerable<TitleMenuItemAttribute>>?
+            GetTitleMenuItemAttribute;
+
+        public Func<GetTitleMenuItemCommandAttributeArgs,
+               IEnumerable<TitleMenuItemCommandAttribute>>?
+            GetTitleMenuItemCommandAttribute;
     }
 }

@@ -9,7 +9,7 @@ namespace PowerBoot.Desktop
     {
         public MySetPropertyUserControl() : base(new SetPropertyUserControlOptions()
         {
-            AutoGenControlAction = (info, element) =>
+            AutoGenControl = (_, element) =>
             {
                 if (element is TextBox box)
                 {
